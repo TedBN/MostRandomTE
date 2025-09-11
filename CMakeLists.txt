@@ -21,4 +21,9 @@ add_executable(MostRandomTE main.cpp
         FreeRoamFunctions.h
         NodeConversionFunctions.cpp
         NodeConversionFunctions.h
-        XoshiroCpp.hpp)
+        XoshiroCpp.hpp
+        ProgramDataTypes.h
+        OpponentFunctions.h
+        OpponentFunctions.cpp
+        ProgramDataTypes.cpp
+)

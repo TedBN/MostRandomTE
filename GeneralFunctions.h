@@ -5,14 +5,18 @@
 #ifndef MOSTRANDOM_GENERALFUNCTIONS_H
 #define MOSTRANDOM_GENERALFUNCTIONS_H
 
-std::vector<std::pair<std::string, bool>> promptUser(const std::vector<std::pair<std::string, bool>>&,
-                                    const std::string&, int*);
+#include "ProgramDataTypes.h"
 
-std::vector<std::pair<std::string, bool>> promptUser(const std::vector<std::pair<std::string, bool>>&,
-       const std::vector<std::pair<std::string, bool>>&, const std::string&, const std::string&, int*);
+bool promptUser(const std::string&);
 
-bool askQuestionAboutSettings(const std::string&);
-bool checkForField(int, int);
-int pickRandomNumber(int, int);
+int refreshRaceIndex(const std::vector<Circuit>&);
+int refreshRaceIndex(const std::vector<Knockout>&);
+int refreshRaceIndex(const std::vector<Sprint>&);
+int refreshRaceIndex(const std::vector<Speedtrap>&);
+int refreshRaceIndex(const std::vector<Drag>&);
+int refreshRaceIndex(const std::vector<Tollbooth>&);
+Opponent searchForOpponent(const std::string&, const std::vector<Opponent>&);
+
+MarkerType convertStringToMarkerTypeEnum(const std::string&);
 
 #endif //MOSTRANDOM_GENERALFUNCTIONS_H
